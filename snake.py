@@ -78,7 +78,7 @@ def move_snake(event):
 
 def check_quit(event):
     global running
-    if event == pygame.QUIT:
+    if event.type == pygame.QUIT:
         running = False
 
 def check_events():
@@ -114,7 +114,7 @@ def reset_game_after_game_over(event):
 def check_end_game_after_game_over(event):
     global is_paused
     global running
-    if pygame.QUIT == event.type:
+    if event.type == pygame.QUIT:
         is_paused = False
         running = False
 
